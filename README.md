@@ -1,6 +1,6 @@
 # Crowdfunding_ETL
 - Module 13 Mini Project
-- Steph Abegg, Ed Pellissier, Eric Lidiak, Ross Boersma
+- Steph Abegg, Eric Lidiak, Ross Boersma
 
 This repository is for the Project 2 crowdfunding ETL (Extract, Transform and Load) challenge. For the ETL mini project, we worked with our Project 1 teams to practice building an ETL pipeline using Python, Pandas, and either Python dictionary methods or regular expressions to extract and transform the data. After transforming the data, four CSV files were created and then used to create an ERD and a table schema and uplodaed into a Postgres database.
 
