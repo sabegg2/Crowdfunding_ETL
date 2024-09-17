@@ -20,7 +20,7 @@ Each of these subsectons, and the related output, is described below.
 
 ## Final ETL_Mini_Project Notebook
 
-As we worked through the project deliverables, we broke up the work across other notebooks that we each worked on individually. For our final submission, we combined all the subsections back into the final ETL_Mini_Project notebook: [ETL_Mini_Project_SAbegg_RBoersma_EPellissier_ELidiak.ipynb](ETL_Mini_Project_SAbegg_RBoersma_EPellissier_ELidiak.ipynb).
+As we worked through the project deliverables, we broke up the work across other notebooks that we each worked on individually. For our final submission, we combined all the subsections back into the final ETL_Mini_Project notebook: [ETL_Mini_Project_SAbegg_RBoersma_ELidiak.ipynb](ETL_Mini_Project_SAbegg_RBoersma_ELidiak.ipynb).
 
 ## Task 1: Create the Category and Subcategory DataFrames
 
