@@ -53,7 +53,7 @@ In this part of the project, the dataframes created in previous sections were us
 
 First, an Entity Relationsihp Diagram of the tables was created by using QuickDBD:
 
-<img src="QuickDBD-export.png" width=400>
+<img src="QuickDBD-ETLProject.png" width=400>
 
 Then, a table schema was created each CSV file; the database schema was saved as a Postgres file named [crowdfunding_db_schema.sql](crowdfunding_db_schema.sql). Next, a new Postgres database named crowdfunding_db was created in PgAdmin, and the tables were added in the correct order to handle the foreign keys. Finally, the csv for each file was imported into its corresponding SQL table.
 
