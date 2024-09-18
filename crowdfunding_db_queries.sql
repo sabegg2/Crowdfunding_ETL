@@ -1,33 +1,29 @@
---Check that the Contacts table exists
-SELECT * FROM Contacts
+--Check that the contacts table exists
+SELECT * FROM contacts
 LIMIT 1;
 
---Check that the Category table exists
-SELECT * FROM Category
+--Check that the category table exists
+SELECT * FROM category
 LIMIT 1;
 
---Check that the Subcategory table exists
-SELECT * FROM Subcategory
+--Check that the subcategory table exists
+SELECT * FROM subcategory
 LIMIT 1;
 
---Check that the Campaign table exists
-SELECT * FROM Campaign
+--Check that the campaign table exists
+SELECT * FROM campaign
 LIMIT 1;
 
 --Queries repeat to show data is now loaded
 
---First 5 rows of Contacts
-SELECT * FROM Contacts
-LIMIT 5;
+--All rows of contacts
+SELECT * FROM contacts;
 
---First 5 rows of Category
-SELECT * FROM Category
-LIMIT 5;
+--All rows of category
+SELECT * FROM category;
 
---First 5 rows of Subcategory
-SELECT * FROM Subcategory
-LIMIT 5;
+--All rows of subcategory
+SELECT * FROM subcategory;
 
---First 5 rows of Campaign
-SELECT * FROM Campaign
-LIMIT 5;
+--All rows of campaign
+SELECT * FROM campaign;

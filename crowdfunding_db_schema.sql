@@ -1,43 +1,46 @@
 --Cleanup script
-DROP TABLE IF EXISTS Contacts CASCADE;
-DROP TABLE IF EXISTS Category CASCADE;
-DROP TABLE IF EXISTS Subcategory CASCADE;
-DROP TABLE IF EXISTS Campaign CASCADE;
+DROP TABLE IF EXISTS contacts CASCADE;
+DROP TABLE IF EXISTS category CASCADE;
+DROP TABLE IF EXISTS subcategory CASCADE;
+DROP TABLE IF EXISTS campaign CASCADE;
 
---Creating the Contacts Table
-CREATE TABLE Contacts (
-	contact_id BIGSERIAL PRIMARY KEY NOT NULL,
-	first_name VARCHAR,
-	last_name VARCHAR,
-	email VARCHAR
+--Creating the contacts table
+CREATE TABLE contacts (
+	contact_id BIGSERIAL PRIMARY KEY,
+	first_name VARCHAR NOT NULL,
+	last_name VARCHAR NOT NULL,
+	email VARCHAR NOT NULL
 );
 
-CREATE TABLE Category (
-	category_id VARCHAR PRIMARY KEY NOT NULL,
-	category VARCHAR
+--Creating the category table
+CREATE TABLE category (
+	category_id VARCHAR PRIMARY KEY,
+	category VARCHAR NOT NULL
 );
 
-CREATE TABLE Subcategory (
-	subcategory_id VARCHAR PRIMARY KEY NOT NULL,
-	subcategory VARCHAR
+--Creating the subcategory table
+CREATE TABLE subcategory (
+	subcategory_id VARCHAR PRIMARY KEY,
+	subcategory VARCHAR NOT NULL
 );
 
-CREATE TABLE Campaign (
-	cf_id BIGSERIAL NOT NULL,
+--Creating the campaign table
+CREATE TABLE campaign (
+	cf_id BIGSERIAL PRIMARY KEY,
 	contact_id BIGINT NOT NULL,
 	FOREIGN KEY (contact_id) REFERENCES Contacts (contact_id),
-	company_name VARCHAR,
-	description VARCHAR,
-	goal DOUBLE,
-	pleged DOUBLE,
-	outcome VARCHAR,
-	backers_count BIGINT,
-	country VARCHAR,
-	currency VARCHAR,
-	launched_date DATETIME,
-	end_date DATETIME,
-	category_id VARCHAR,
-	FOREIGN KEY (category_id) REFERENCES Category (category_id)
-	subcategory_id VARCHAR,
+	company_name VARCHAR NOT NULL,
+	description VARCHAR NOT NULL,
+	goal DOUBLE PRECISION NOT NULL,
+	pledged DOUBLE PRECISION NOT NULL,
+	outcome VARCHAR NOT NULL,
+	backers_count BIGINT NOT NULL,
+	country VARCHAR NOT NULL,
+	currency VARCHAR NOT NULL,
+	launched_date DATE NOT NULL,
+	end_date DATE NOT NULL,
+	category_id VARCHAR NOT NULL,
+	FOREIGN KEY (category_id) REFERENCES Category (category_id),
+	subcategory_id VARCHAR NOT NULL,
 	FOREIGN KEY (subcategory_id) REFERENCES Subcategory (subcategory_id)
 );
