@@ -18,7 +18,7 @@ CREATE TABLE Category (
 );
 
 CREATE TABLE Subcategory (
-	subcategory_id VARCHAR NOT NULL,
+	subcategory_id VARCHAR PRIMARY KEY NOT NULL,
 	subcategory VARCHAR
 );
 
