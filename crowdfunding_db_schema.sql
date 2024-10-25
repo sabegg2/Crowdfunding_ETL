@@ -17,14 +17,14 @@ CREATE TABLE contacts (
 CREATE TABLE category (
 	category_id VARCHAR(5) PRIMARY KEY,
 	category VARCHAR(50) NOT NULL,
-	CONSTRAINT category_check CHECK (category_id LIKE 'cat%')
+	CONSTRAINT category_check CHECK (category_id ~ '^cat[0-9]+$')
 );
 
 --Creating the subcategory table
 CREATE TABLE subcategory (
 	subcategory_id VARCHAR(10) PRIMARY KEY,
 	subcategory VARCHAR(50) NOT NULL,
-	CONSTRAINT subcategory_check CHECK (subcategory_id LIKE 'subcat%')
+	CONSTRAINT subcategory_check CHECK (subcategory_id ~ '^subcat[0-9]+$')
 );
 
 --Creating the campaign table
@@ -44,8 +44,9 @@ CREATE TABLE campaign (
 	end_date DATE NOT NULL,
 	category_id VARCHAR(5) NOT NULL,
 	FOREIGN KEY (category_id) REFERENCES Category (category_id),
-	CONSTRAINT category_check CHECK (category_id LIKE 'cat%'),
+	CONSTRAINT category_check CHECK (category_id ~ '^cat[0-9]+$'),
 	subcategory_id VARCHAR(10) NOT NULL,
 	FOREIGN KEY (subcategory_id) REFERENCES Subcategory (subcategory_id),
-	CONSTRAINT subcategory_check CHECK (subcategory_id LIKE 'subcat%'),
+	CONSTRAINT subcategory_check CHECK (subcategory_id ~ '^subcat[0-9]+$')
+,
 );
